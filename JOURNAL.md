@@ -73,6 +73,7 @@
   4. **Widget Embedding Test:** Tested `demo/index.html` and verified the iframe renders customer reviews with custom accent colors (`?color=%231F3A3D`) and interactive Slideshow/List toggles.
   5. **Vite Production Build Verification:** Executed `npm run build` to confirm clean compilation (30 KB CSS, 324 KB JS bundle) with zero warnings or errors.
   6. **Deployed Render Backend Verification:** Tested `curl -s https://testimonialhub-backend.onrender.com/api/testimonials/approved` and verified live database JSON responses over HTTPS.
+  7. **Deployed Vercel Frontend Verification:** Verified `https://testimonial-hub-lemon.vercel.app` production deployment and cross-origin HTTPS requests.
 
 - **What do you know is still broken or fragile?**
   - **Synchronous AI Processing Latency:** If Google Gemini API experiences elevated latency or rate limits, the `POST /api/testimonials` endpoint waits for AI generation before returning a response. Fallbacks exist so it never crashes, but moving AI analysis to a background queue (BullMQ/Redis) would make form submissions instant.

@@ -2,7 +2,9 @@
 
 A production-grade testimonial collection, moderation, and display platform built with **React 19**, **Node.js**, **Express**, and **MongoDB Atlas**. Features an editorial modern SaaS design system, AI-powered sentiment analysis via **Google Gemini** (`@google/genai`), signature `QuoteSeal` brand marks, and a restructured, embeddable widget page.
 
-- **Live Deployed Backend (Render)**: [https://testimonialhub-backend.onrender.com](https://testimonialhub-backend.onrender.com)
+### 🌐 Live Production Deployments
+- **Live Frontend (Vercel)**: [https://testimonial-hub-lemon.vercel.app](https://testimonial-hub-lemon.vercel.app)
+- **Live Backend API (Render)**: [https://testimonialhub-backend.onrender.com](https://testimonialhub-backend.onrender.com)
 
 ---
 
@@ -119,10 +121,9 @@ testimonial-platform/
 
 ## 🚀 Tech Stack
 
-- **Frontend**: React 19, Vite, React Router DOM v7, Axios, TailwindCSS v4, React Hot Toast.
-- **Backend**: Node.js, Express, Mongoose, Dotenv, CORS, Validator, Express-Validator, `@google/genai`.
+- **Frontend**: React 19, Vite, React Router DOM v7, Axios, TailwindCSS v4, React Hot Toast (Deployed on **Vercel**).
+- **Backend**: Node.js, Express, Mongoose, Dotenv, CORS, Validator, Express-Validator, `@google/genai` (Deployed on **Render**).
 - **Database**: MongoDB Atlas.
-- **Deployment**: Backend hosted on **Render**.
 
 ---
 
@@ -135,7 +136,6 @@ MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/Testimonial
 MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/Testimonial
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
-*(Note: Backend port is set to `5001` to prevent port 5000 conflicts with macOS AirPlay Receiver).*
 
 ### Frontend (`frontend/.env`)
 ```env
@@ -185,7 +185,7 @@ cd frontend && npm run dev
 
 ```html
 <iframe
-  src="http://localhost:5173/widget?color=%231F3A3D"
+  src="https://testimonial-hub-lemon.vercel.app/widget?color=%231F3A3D"
   width="100%"
   height="480"
   frameborder="0"
