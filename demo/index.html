@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acme Inc. - Third-Party Testimonial Widget Demo</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #faf9f6;
+      color: #14161f;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      border: 1px solid #e6e4dd;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      margin-bottom: 30px;
+    }
+    h1 {
+      margin-top: 0;
+      color: #14161f;
+      font-size: 24px;
+    }
+    p {
+      color: #5b5f6b;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    .widget-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .widget-container {
+      background: white;
+      padding: 12px;
+      border-radius: 20px;
+      border: 1px solid #e6e4dd;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+    }
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      border-radius: 14px;
+    }
+    .code-block {
+      background: #14161f;
+      color: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-family: monospace;
+      font-size: 13px;
+      overflow-x: auto;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+    h2 {
+      font-size: 18px;
+      color: #14161f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Third-Party Website Demo</h1>
+      <p>
+        This demo illustrates how third-party websites can embed the <strong>TestimonialHub Widget</strong> using a customizable <code>&lt;iframe&gt;</code> snippet with accent color parameters.
+      </p>
+
+      <h3>Embed Code Snippet:</h3>
+      <div class="code-block">
+&lt;iframe
+  src="http://localhost:5173/widget?color=%231F3A3D"
+  width="100%"
+  height="480"
+  frameborder="0"
+  style="border-radius: 16px; overflow: hidden;"&gt;
+&lt;/iframe&gt;
+      </div>
+    </div>
+
+    <h2>Live Embedded Widgets (Custom Color Parameters)</h2>
+    <div class="widget-grid">
+      <!-- Teal Accent Widget -->
+      <div class="widget-container">
+        <iframe src="http://localhost:5173/widget?color=%231F3A3D"></iframe>
+      </div>
+
+      <!-- Emerald Accent Widget -->
+      <div class="widget-container">
+        <iframe src="http://localhost:5173/widget?color=%23059669"></iframe>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
