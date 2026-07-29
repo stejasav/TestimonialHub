@@ -2,6 +2,8 @@
 
 A production-grade testimonial collection, moderation, and display platform built with **React 19**, **Node.js**, **Express**, and **MongoDB Atlas**. Features an editorial modern SaaS design system, AI-powered sentiment analysis via **Google Gemini** (`@google/genai`), signature `QuoteSeal` brand marks, and a restructured, embeddable widget page.
 
+- **Live Deployed Backend (Render)**: [https://testimonialhub-backend.onrender.com](https://testimonialhub-backend.onrender.com)
+
 ---
 
 ## 🌟 Key Features
@@ -79,6 +81,7 @@ testimonial-platform/
 │   │   ├── App.jsx
 │   │   ├── main.jsx
 │   │   └── index.css
+│   ├── .env
 │   ├── package.json
 │   └── vite.config.js
 │
@@ -119,6 +122,7 @@ testimonial-platform/
 - **Frontend**: React 19, Vite, React Router DOM v7, Axios, TailwindCSS v4, React Hot Toast.
 - **Backend**: Node.js, Express, Mongoose, Dotenv, CORS, Validator, Express-Validator, `@google/genai`.
 - **Database**: MongoDB Atlas.
+- **Deployment**: Backend hosted on **Render**.
 
 ---
 
@@ -135,12 +139,12 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 ### Frontend (`frontend/.env`)
 ```env
-VITE_API_URL=http://localhost:5001/api
+VITE_API_URL=https://testimonialhub-backend.onrender.com/api
 ```
 
 ---
 
-## 📡 API Endpoints
+## 📡 API Endpoints (Base URL: `https://testimonialhub-backend.onrender.com`)
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
